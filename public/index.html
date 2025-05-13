@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISO Caso de estudio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>ISO 27701 - Caso de Estudio</h1>
+
+    <div class="button-group">
+      <button id="clearCase">Limpiar</button>
+      <button id="generateCase">Generar caso de estudio</button>
+    </div>
+
+    <h2>Caso generado:</h2>
+    <div id="caseText" class="output-box"></div>
+
+    <div class="button-group">
+      <button id="downloadPdf">Descargar en PDF</button>
+    </div>
+
+    <h2>Tu solución al caso</h2>
+    <textarea id="userSolution" placeholder="Escribe tu solución aquí..."></textarea>
+
+    <h2>Solución IA</h2>
+    <button id="generateAISolution">Solución IA</button>
+    <div id="aiSolution" class="output-box"></div>
+
+    <div class="button-group">
+      <button id="compareSolutions">Comparar resultado</button>
+    </div>
+
+    <div id="comparisonResult" class="output-box"></div>
+  </div>
+
+  <footer class="footer">
+  Grupo 5: N. Liberio, G. Ruales, G. Tumbaco &nbsp; | &nbsp; Legislación P1 25-25
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
