@@ -1,20 +1,18 @@
-# Usa una imagen oficial de Node.js
+# Usa imagen oficial de Node.js
 FROM node:18
 
-# Crea el directorio de trabajo
+# Directorio de trabajo
 WORKDIR /app
 
-# Copia el package.json y package-lock.json
+# Copia dependencias
 COPY package*.json ./
-
-# Instala las dependencias
 RUN npm install
 
-# Copia el resto de los archivos de la app
+# Copia el resto de la app
 COPY . .
 
-# Expone el puerto que usa Railway (usa la variable de entorno PORT)
-EXPOSE 3000
+# Expone el puerto proporcionado por Railway
+EXPOSE 8080
 
-# Comando para iniciar la app
-CMD ["node", "index.js"]
+# Inicia el servidor
+CMD [ "npm", "start" ]
